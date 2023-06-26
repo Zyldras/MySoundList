@@ -1,11 +1,13 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const path = require('path');
+const root = { root : __dirname };
 
-const port = 3000
+const port = 3000;
 
-/* GET home page. */
-app.get('/', function(req, res, next) {
-	res.sendFile(__dirname, 'index.html');
+
+app.get('/', function(req, res) {
+	res.sendFile('views/index.html', root);
 });
 
 app.get("/api/users", (req, res, next) => {
@@ -32,8 +34,8 @@ app.use(function(err, req, res, next) {
   
 	// render the error page
 	res.status(err.status || 500);
-	res.send('error.html', { code: "test" });
-  });
+	res.sendFile('views/error.html', root);
+});
 
 app.listen(port, () => {
 	console.log(`Server running on port ${ port }`);
