@@ -1,26 +1,19 @@
 {
   "name": "mysoundlist",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "nodemon ./app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zyldras/MySoundList.git"
-  },
-  "author": "Théo ETHEVE, Guillaume PRODAULT",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Zyldras/MySoundList/issues"
-  },
-  "homepage": "https://github.com/Zyldras/MySoundList#readme",
   "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "express": "^4.18.2",
-    "node": "^20.3.1",
+    "http-errors": "~1.6.3",
+    "md5": "^2.3.0",
+    "morgan": "~1.9.1",
     "nodemon": "^2.0.22",
-    "sqlite": "^4.2.1"
+    "pug": "^3.0.2",
+    "sqlite3": "^5.1.6"
   }
 }
