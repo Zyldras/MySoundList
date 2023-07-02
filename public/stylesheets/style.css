@@ -46,6 +46,10 @@ h1, h2 {
   cursor: pointer;
 }
 
+#playlistForm {
+  display: none;
+}
+
 /* Conteneur flex pour le header et le footer */
 .container {
   display: flex;
