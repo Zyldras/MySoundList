@@ -1,8 +1,12 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 20px;
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   background-color: #1E1E1E;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -20,7 +24,7 @@ a {
   font-family: 'Syne Mono';
   color: #BFA8FF;
   text-decoration: none;
-  font-size: 50px;
+  font-size: 44px;
 }
 
 h1, h2 {
@@ -34,4 +38,33 @@ h1, h2 {
   font-weight: bold;
   border-radius: 10px;
   padding: 10px;
+}
+
+/* Conteneur flex pour le header et le footer */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Positionnement du header et du footer en ligne */
+header, footer {
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #321967;
+  border-radius: 5px;
+}
+
+header ul, footer ul {
+  list-style-type: none;
+}
+
+/* Style des liens du footer */
+footer a, header a {
+  margin-left:10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
 }
