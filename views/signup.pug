@@ -1,19 +1,25 @@
 extends layout
 
 block content
-  h1 Créer un compte
+  h2 Créer un compte
+  div
+    if message
+      b #{message}
+      br
+      br
+
   form(action="/signup", method="POST")
     div
-      label(for="username") Nom d'utilisateur
+      label(for="username") Nom d'utilisateur : 
       input(type="text", name="username", id="username", required)
     div
-      label(for="password") Mot de passe
+      label(for="password") Mot de passe : 
       input(type="password", name="password", id="password", required)
     div
-      label(for="confirmPassword") Confirmer le mot de passe
+      label(for="confirmPassword") Confirmer le mot de passe : 
       input(type="password", name="confirmPassword", id="confirmPassword", required)
     div
-      input(type="submit", value="Créer un compte")
+      input.btn(type="submit", value="Créer un compte")
     div
       p Vous avez déjà un compte ?
         a(href="/login") Se connecter

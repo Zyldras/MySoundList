@@ -1,8 +1,37 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  background-color: #1E1E1E;
 }
 
 a {
   color: #00B7FF;
+}
+
+.title {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  font-family: 'Syne Mono';
+  color: #BFA8FF;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+h1, h2 {
+  font-family: 'Syne Mono';
+  color: #BFA8FF;
+}
+
+.btn {
+  background-color: #FF57F8;
+  color: #2C2B2B;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
 }

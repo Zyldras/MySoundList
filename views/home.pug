@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  if user
+    h2 Bienvenue, #{user} !
+    p Vous êtes connecté.
+  else
+    h2 Bienvenue sur MySoundList
+    p Vous n'êtes pas connecté. Veuillez vous 
+      a(href="/login") connecter
+      |  pour accéder à votre compte.

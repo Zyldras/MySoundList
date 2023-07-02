@@ -2,12 +2,23 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// Configuration du middleware express-session
+app.use(session({
+  secret: 'MySoundList',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 60 * 60 * 1000, // Durée de vie de 1 heure (en millisecondes)
+  }
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
