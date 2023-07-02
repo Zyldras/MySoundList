@@ -16,10 +16,11 @@ html(lang="fr")
           a.title(href="/") MySoundList
         li
           a(href="/home") Home
-        li
-          a(href="/login") Log in
-        li
-          a(href="/signup") Sign up
+        if !session
+          li
+            a(href="/login") Log in
+          li
+            a(href="/signup") Sign up
         if session
           li
             a(href="/logout") Log out
@@ -30,4 +31,4 @@ html(lang="fr")
     footer
       ul.container
         li 
-          a(href="/about") About
+          a(href="/about") About us

@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 a {
@@ -22,7 +23,7 @@ a {
   margin-right: 0;
   font-weight: bold;
   font-family: 'Syne Mono';
-  color: #BFA8FF;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 44px;
 }
@@ -40,18 +41,28 @@ h1, h2 {
   padding: 10px;
 }
 
+.btn:hover {
+  background-color: #cd23c4;
+  cursor: pointer;
+}
+
 /* Conteneur flex pour le header et le footer */
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li.container img {
+  padding-right: 20px;
 }
 
 /* Positionnement du header et du footer en ligne */
 header, footer {
   align-items: center;
   width: 100%;
-  padding: 10px;
   background-color: #321967;
   border-radius: 5px;
 }
@@ -62,8 +73,7 @@ header ul, footer ul {
 
 /* Style des liens du footer */
 footer a, header a {
-  margin-left:10px;
-  margin-right: 10px;
+  margin: 20px;
   text-decoration: none;
   color: #FFFFFF;
   font-size: 20px;
