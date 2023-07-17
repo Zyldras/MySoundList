@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h2 #{playlist.pla_name}
+  ul
+    each music in musics
+      li= music.mus_name
+
+  button#addMusicBtn.btn(type="button") Ajouter une musique
+
+  form#addMusicForm(action=`/playlist/add-music/${playlist.pla_id}` method="post" style="display: none;")
+    div
+      label(for="musicName") Nom de la musique : 
+      input(type="text" id="musicName" name="musicName" required)
+    div
+      label(for="musicArtist") Artist : 
+      input(type="text" id="musicArtist" name="musicArtist" required)
+    div
+      button.btn(type="submit") Confirmer
+  script(src="/javascripts/playlist.js")

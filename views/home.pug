@@ -6,23 +6,23 @@ block content
     button#addPlaylistBtn.btn(type="button") Ajouter une playlist
     form#playlistForm(action="/playlist/create" method="post" style="display: none;")
       div
-        label(for="playlistName") Playlist Name : 
+        label(for="playlistName") Nom de la playlist : 
         input(type="text" id="playlistName" name="playlistName" required)
       div
-        label(for="members") Members : 
+        label(for="members") Membres : 
         select(id="members" name="members" multiple)
           each user in users
             option(value=user.usr_id) #{user.usr_name}
       div
-        button.btn(type="submit") Create Playlist
-    h2 Your Playlists
+        button.btn(type="submit") Créer Playlist
+    h2 Vos Playlists
     if playlists && playlists.length > 0
       ul
         each playlist in playlists
           li
-            a(href="/playlist/#{playlist.pla_id}") #{playlist.pla_name}
+            a(href=`/playlist/${playlist.pla_id}`) #{playlist.pla_name}
     else
-      p You don't have any playlists yet.
+      p Vous n'avez pas encore de playlists.
   else
     h2 Bienvenue sur MySoundList !
     p Vous n'êtes pas connecté. Veuillez vous 

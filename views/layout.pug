@@ -6,6 +6,7 @@ html(lang="fr")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" type="text/css" href="../stylesheets/style.css")
     link(href='https://fonts.googleapis.com/css?family=Syne Mono' rel='stylesheet')
+    link(rel="icon" type="image/png" href="../images/MySoundList Logo.png")
     title MySoundList
 
   body
@@ -15,15 +16,15 @@ html(lang="fr")
           img(src="../images/MySoundList Logo.png", alt="Logo", height="100")
           a.title(href="/") MySoundList
         li
-          a(href="/home") Home
+          a(href="/home") Accueil
         if !session
           li
-            a(href="/login") Log in
+            a(href="/login") Connexion
           li
-            a(href="/signup") Sign up
+            a(href="/signup") Inscription
         if session
           li
-            a(href="/logout") Log out
+            a(href="/logout") Déconnexion
 
     block content 
 
@@ -31,4 +32,4 @@ html(lang="fr")
     footer
       ul.container
         li 
-          a(href="/about") About us
+          a(href="/about") À propos
